@@ -56,6 +56,21 @@ section{
     background-color: white;
     padding: 20px;
     border-radius: 20px;
+
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.493);
+}
+
+section > div#msg{
+    margin-bottom: 15px;    
+}
+
+section > div#img{
+    background-image: url('../img/morning.jpg');
+    background-size: cover;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
 }
 
 /* ______ footer __________*/
