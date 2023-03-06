@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando Condicionais no JavaScript</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="script/script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+
+    <section>
+        <p>
+            <label for="nascimento">Ano de nascimento: </label>
+            <input type="text" id="nascimento" class="nasc" min="1900" required>
+        </p>
+        <p>
+            Sexo :  
+            <input type="radio" name="rdsex" id="male" checked>
+            <label for="male">Masculino </label>
+            
+            <input type="radio" name="rdsex" id="female">
+            <label for="female">Feminino </label>
+        </p>
+        <p>
+            <input type="button" value="Verificar" onclick="verificar()">
+        </p>
+        
+        <div id="msg">
+            Preencha os dados acima para ver o resultado!
+        </div>
+
+        <div id="img">
+
+        </div>
+    </section>
+
+    <footer>
+        Criado por Sóstenes MC - CursoemVideo
+    </footer>
+    
+    
+</body>
+</html>

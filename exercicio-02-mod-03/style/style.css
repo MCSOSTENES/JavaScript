@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+/*
+Organization:
+    container{
+        Elements (Display)
+            alphabetical order
+        Elements (Position)
+            alphabetical order
+        Elements (box-model)
+            alphabetical order
+        Elements (Typography)
+            alphabetical order
+        Elements (Manipulation)
+            alphabetical order
+        Elements (Others)
+            alphabetical order
+    }
+*/
+
+/* ______ Globais __________*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ______ Body __________*/
+
+body{
+    background-color: blueviolet;
+    width: 500px;
+    margin: auto;
+    padding-top: 100px;
+
+    text-align: center;
+}
+
+/* ______ Header __________*/
+
+header{
+    color: rgb(255, 255, 255);
+    margin-bottom: 10px;
+}
+
+header > h1{
+    text-shadow: 2px 2px 5px #0000009c;
+}
+
+/* ______ Section __________*/
+
+section{
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.493);
+
+    text-align: left;
+    line-height: 2em;
+}
+
+section > div#msg{
+       display: block;
+}
+
+section > div#img{
+    display: none;
+    background-size: cover;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+/* ______ footer __________*/
+
+footer{
+    margin-top: 10px;
+
+    font-size: 0.8em;
+}
