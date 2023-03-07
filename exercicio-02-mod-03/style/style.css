@@ -68,7 +68,7 @@ section > div#msg{
 }
 
 section > div#img{
-    display: none;
+    background-image: url(../img/interogation.png);
     background-size: cover;
     margin: auto;
     width: 200px;
