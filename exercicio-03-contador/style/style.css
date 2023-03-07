@@ -33,7 +33,7 @@ header{
 section{
     background-color: aliceblue;
 
-    width: 70%;
+    width: 80%;
     border-radius: 25px;
 
     margin: auto;
@@ -55,5 +55,12 @@ section > div{
 footer{
     line-height: 2em;
     text-align: center;
+}
+
+@media screen and (min-width: 900px) {
+    section{
+        width: 720px;
+    }
+    
 }
 
