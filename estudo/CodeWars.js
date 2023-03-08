@@ -126,4 +126,11 @@ console.log (summation(test))
 const summation2 = n => n * (n + 1) / 2;
 console.log(summation2(test))
 
+//Another solution
+
+var summation3 = function (num) {
+  return (num > 1) ? num + summation(num - 1):num;
+  //test     if true, use the same function to calc.
+}
+
 ****************************************************/
