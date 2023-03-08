@@ -27,6 +27,9 @@ function add_number(){
 
         cont ++
     }
+    number_txt.value = ""
+    number_txt.focus()
+    result.innerHTML = ""
 }
 
 function analise(){
