@@ -11,3 +11,6 @@ let soma = ((a,b) => a+b)
 
 variavel = soma (10,40)
 console.log (variavel)*/
+
+let tests = " "
+console.log(tests.length)

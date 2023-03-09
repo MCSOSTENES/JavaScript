@@ -184,3 +184,62 @@ console.log(likes(names))
 console.log(likes2(names))
 
 **************************************************/
+/********************************************** 
+ Complete the method/function so that it converts dash/underscore delimited words into camel casing. The first word within the output should be capitalized only if the original word was capitalized (known as Upper Camel Case, also often referred to as Pascal case). The next words should be always capitalized.
+
+Examples
+"the-stealth-warrior" gets converted to "theStealthWarrior"
+"The_Stealth_Warrior" gets converted to "TheStealthWarrior"
+
+
+//My code
+function toCamelCase(str){
+  let new_str = ''
+  if(str.indexOf('-') > -1 || str.indexOf('_') > -1){
+    for(i = 0 ; i < str.length ; i++){
+      if(str[i] == '-' || str[i] == '_'){
+        new_str +=''
+      }
+      else if (str[i-1] == '-' || str[i-1] == '_'){
+        new_str += `${str[i].toUpperCase()}`
+      }
+      else{
+        new_str += `${str[i]}`
+      }     
+    }
+  }
+  else {
+    new_str = str
+  }
+  return(new_str)
+}
+
+//Other solution
+
+function toCamelCase2(str){
+  var regExp=/[-_]\w/ig;
+  //using regular expressions (search about**)
+  return str.replace(regExp,function(match){
+        return match.charAt(1).toUpperCase();
+   });
+}
+
+let teste = "sostenes_mesquita_chaves"
+console.log(toCamelCase(teste))
+console.log(toCamelCase2(teste))
+
+//Regular expressions - https://www.youtube.com/playlist?list=PLbIBj8vQhvm0Yfx1JMCEOM-BB-WOCOUE1
+
+*******************************************/
+
+function oddOrEven(array) {
+  let sum = 0
+  for(i = 0; i < array.length; i++){
+    sum += array[i]
+  }
+  return (sum%2 == 0) ? "even":"odd"
+}
+
+let num = [2,3,4,5]
+
+console.log(oddOrEven(num))
