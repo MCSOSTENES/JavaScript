@@ -16,7 +16,13 @@ Good luck and enjoy! */
 //Estudar funcoes de manipulacao do array slice por exemplo
 
 function wave(str){
-    // Code here
+    let newStr = []
+    for(i = 0; i < str.length; i++){
+      if(str[i] != ' '){
+        newStr.push(str.slice(0,i)+str[i].toUpperCase()+str.slice(i+1,str.length))
+      }
+    }
+    return newStr
   }
 
 
