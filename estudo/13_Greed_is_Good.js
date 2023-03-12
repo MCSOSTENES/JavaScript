@@ -34,6 +34,11 @@ function score( dice ) {
     return dice
 }
 
+let score = 0
+    dice = dice.sort().join('')
+    let times = dice.split(' ').sort().map(face => dice.match(new RegExp(face,"gi")))
+    return times
+
 
 //console.log(score( [2, 3, 4, 6, 2] ))   //== 0,   "Should be 0 :-(" );
 
