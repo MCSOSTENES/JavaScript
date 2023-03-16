@@ -9,7 +9,8 @@ contains a digit
 only contains alphanumeric characters (note that '_' is not alphanumeric)
 */
 
-const REGEXP = srt => srt.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\d)[a-zA-Z\d]{6,}$/g)? true:false
+//My solution
+const REGEXP = srt => srt.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\d)[a-zA-Z\d]{6,}$/)? true:false
 
 
 
