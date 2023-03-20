@@ -30,28 +30,59 @@ sudoku(puzzle);
  */
 
 function sudoku(puzzle) {
+    let interaction = possibilites(puzzle)
+    for(i=1; i<=81;i++){
+       puzzle = resolve(interaction,puzzle)
+       interaction = possibilites(puzzle)
+    }
+    return puzzle 
+}
+function resolve (interaction,puzzle){
     for(let line = 0; line <9; line++){
         for(let column = 0; column <9; column++){
-            if(puzzle[line][column] === 0) puzzle[line][column] = check(line,column)          
+            if(interaction[line][column] != 0 && interaction[line][column].length === 1 ){ 
+                puzzle[line][column] = interaction[line][column][0]
+            }     
         }
     }
     return puzzle
 }
-
-function check(line,column){
-    for(let i = 9; i>=1; i--){
-        if (checkHorizontal(line,i) && checkVertical(column, i) && checkSquare(line,column, i)){
-            return i
+function matriz(){
+    return [
+        [0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0],
+        [0,0,0,0,0,0,0,0,0]]
+}
+function possibilites(puzzle){
+    let numP = matriz()
+    for(let line = 0; line <9; line++){
+        for(let column = 0; column <9; column++){
+            if(puzzle[line][column] === 0){ numP[line][column] = (check(line,column,puzzle))}     
         }
     }
-    return `cacahere`
+    return numP
 }
-function checkHorizontal (line,number){
-    if(puzzle[line].indexOf(number)=== -1) return true
+function check(line,column,puzzle){
+    let arr = []
+    for(let i = 1; i<=9; i++){
+        if (checkHorizontal(line,i,puzzle) && checkVertical(column, i,puzzle) && checkSquare(line,column, i,puzzle)){
+            arr.push(i)
+        }
+    }
+    return arr
+}
+function checkHorizontal (line,number,puzzle){
+    if(puzzle[line].indexOf(number) === -1) return true
     else return false
 }
 
-function checkVertical (column,number){
+function checkVertical (column,number,puzzle){
     let arr = []
     for(let i = 0; i<9; i++){
         arr.push(puzzle[i][column])
@@ -60,7 +91,7 @@ function checkVertical (column,number){
     else return false
 }
 
-function checkSquare (line,column,number){
+function checkSquare (line,column,number,puzzle){
     let arr = []
     let l = 3
     let c = 3
@@ -105,3 +136,5 @@ console.log(sudoku(puzzle))
 [9,6,1,5,3,7,2,8,4],
 [2,8,7,4,1,9,6,3,5],
 [3,4,5,2,8,6,1,7,9]] */
+
+
