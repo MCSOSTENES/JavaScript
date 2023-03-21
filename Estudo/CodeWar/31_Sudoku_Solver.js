@@ -31,7 +31,8 @@ sudoku(puzzle);
 
 function sudoku(puzzle) {
     let interaction = possibilites(puzzle)
-    for(i=1; i<=81;i++){
+    console.log(interaction)
+    for(i=0; i<=20;i++){
        puzzle = resolve(interaction,puzzle)
        interaction = possibilites(puzzle)
     }
