@@ -9,7 +9,8 @@ XO("ooxXm") => true
 XO("zpzpzpp") => true // when no 'x' and 'o' is present should return true
 XO("zzoo") => false
  */
-function XO(str) {
+//1 try
+function XO1(str) {
     let nO = str.match(new RegExp(/[o]/gi))?str.match(new RegExp(/[o]/gi)):''
     let nX = str.match(new RegExp(/[x]/gi))? str.match(new RegExp(/[x]/gi)): ''
     if(nO.length == nX.length){
@@ -20,7 +21,9 @@ function XO(str) {
     }
 }
 
-  console.log(XO('xo'))    //,true);
+
+
+  console.log(XO(' '))    //,true);
   console.log(XO("xxOo"))    //,true);
   console.log(XO("xxxm"))    //,false);
   console.log(XO("Oo"))    //,false);
